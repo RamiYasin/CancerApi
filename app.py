@@ -18,7 +18,7 @@ def tversky_loss(y_true, y_pred, alpha=0.7):
     return 1 - (true_pos + smooth) / (true_pos + alpha * false_neg + (1 - alpha) * false_pos + smooth)
 
 # === Load model ===
-MODEL_PATH = "resunetPlus_mammo.keras"  # Adjust this if needed
+MODEL_PATH = "mobilenet_mammo.keras"  # Adjust this if needed
 model = keras.models.load_model(MODEL_PATH, compile=False)
 
 # === Image size ===
